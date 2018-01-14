@@ -1,0 +1,7 @@
+.film {
+    transition: 0.5s;
+    
+    &:hover {
+        background: black;
+    }
+}

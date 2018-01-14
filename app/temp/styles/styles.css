@@ -461,6 +461,23 @@ main {
     overflow: hidden; 
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+        margin: 0;
+}
+
+.some-top-padding {
+    padding-top: 30px;
+}
+
+.some-bottom-padding {
+    padding-bottom: 30px;
+}
+
 .top-menu {
     text-decoration: none;
     font-size: 1.5rem;
@@ -546,7 +563,7 @@ main {
 }
 
 #our-films {
-    background-color: #d3a239;
+    background-color: #1c1c1c;
 }
 
 #who-we-are {
@@ -558,13 +575,15 @@ main {
 .page {
     width: 100%;
     height: 100vh;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
 }
 
 .page__video-container {
         display: block;
         width: 100vw;
         height: 100%;
-        background-color: purple;
+        background-color: black;
         pointer-events: none;
         -webkit-box-sizing: border-box;
                 box-sizing: border-box;
@@ -576,13 +595,143 @@ main {
 .page__video-container iframe {
             width: 100%; 
             height: 56.25vw; /* 100/56.25 = 560/315 = 1.778 */
-            background:red;
+            background:black;
             margin: 0 auto 0 auto;
         }
 
-.row {
+.row::after {
+		content: "";
+		clear: both;
+		display: table;
+	}
 
-}
+.row--t-padding {
+		padding-top: 80px;
+	}
+
+.row--full-height {
+        height: 100%;
+    }
+
+.row--gutters {
+		margin-right: -65px;
+	}
+
+.row--gutters-large {
+		margin-right: -100px;
+	}
+
+.row--gutters-small {
+		margin-right: -45px;
+	}
+
+.row--gutters > div {
+		padding-right: 65px;
+	}
+
+.row--gutters-large > div {
+		padding-right: 100px;
+	}
+
+.row--gutters-small > div{
+		padding-right: 45px;
+	}
+
+.row__b-margin-until-medium {
+		margin-bottom: 1rem;
+	}
+
+@media (min-width: 800px) {
+		.row__b-margin-until-medium {
+			margin-bottom: 0;
+		}
+		
+		.row__medium-4 {
+			float: left;
+			width: 33.33%;
+		}
+		
+		.row__medium-4--larger {
+			width: 37%;
+		}
+		
+		.row__medium-6 {
+			float:left;
+			width: 50%;
+		}
+		
+		.row__medium-8 {
+			float: left;
+			width: 66.66%;
+		}
+		
+		.row__medium-8--smaller {
+			width: 63%;
+		}
+	}
+
+@media (min-width: 1010px) {
+		.row__b-margin-until-large {
+			margin-bottom: 0;
+		}
+		
+		.row__large-4 {
+			float: left;
+			width: 33.33%;
+		}
+		
+		.row__large-4--larger {
+			width: 37%;
+		}
+		
+		.row__large-6 {
+			float:left;
+			width: 50%;
+		}
+		
+		.row__large-8 {
+			float: left;
+			width: 66.66%;
+		}
+		
+		.row__large-8--smaller {
+			width: 63%;
+		}
+	}
+
+/* begin equal height rules */
+
+@media (min-width: 800px) {
+
+.flexbox .row--equal-height-at-medium {
+				display: -webkit-box;
+				display: -ms-flexbox;
+				display: flex
+		}
+	}
+
+.flexbox .row--equal-height-at-medium > div {
+				float: none;
+				display: -webkit-box;
+				display: -ms-flexbox;
+				display: flex;
+			}
+
+@media (min-width: 1010px) {
+
+.flexbox .row--equal-height-at-large {
+				display: -webkit-box;
+				display: -ms-flexbox;
+				display: flex
+		}
+	}
+
+.flexbox .row--equal-height-at-large > div {
+				float: none;
+				display: -webkit-box;
+				display: -ms-flexbox;
+				display: flex;
+			}
 
 .header {
    color: white;
@@ -590,22 +739,51 @@ main {
    display: inline-block;
    margin: 0;
    font-weight: 300;
+   -webkit-box-sizing: border-box;
+           box-sizing: border-box;
+   text-align:center;
+    
+    
     
 }
 
 .header__site {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        -webkit-transform: translate(-50%, -50%);
-                transform: translate(-50%, -50%);
         font-size: 2.5rem;
     }
+
+.header__site__container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -webkit-transform: translate(-50%, -50%);
+                    transform: translate(-50%, -50%);
+        }
+
+.header__site__byline {
+            padding: 10px;
+            font-weight: 300;
+            color: white;
+            text-align: center;
+        }
 
 .header__section {
         
     }
 
-.header--transp-box {
+.header--transparent-box {
         background-color: rgba(0, 0, 0, 0.3);
+    }
+
+.header--centered {
+        margin: 0 auto 0 auto;
+        display: block;
+    }
+
+.film {
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+}
+
+.film:hover {
+        background: black;
     }

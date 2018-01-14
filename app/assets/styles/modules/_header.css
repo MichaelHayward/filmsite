@@ -4,21 +4,40 @@
    display: inline-block;
    margin: 0;
    font-weight: 300;
+   box-sizing: border-box;
+   text-align:center;
     
     &__site {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
         font-size: 2.5rem;
+        
+        &__container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        
+        &__byline {
+            padding: 10px;
+            font-weight: 300;
+            color: white;
+            text-align: center;
+        }
     }
     
     &__section {
         
     }
     
-    &--transp-box {
+    &--transparent-box {
         background-color: rgba(0, 0, 0, 0.3);
     }
+    
+    &--centered {
+        margin: 0 auto 0 auto;
+        display: block;
+    }
+    
+    
     
 }
