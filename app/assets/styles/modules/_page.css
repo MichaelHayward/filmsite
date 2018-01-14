@@ -1,0 +1,35 @@
+/* Color for testing*/
+#home {
+    background-color: lightgrey;
+}
+#our-films {
+    background-color: #d3a239;
+}
+#who-we-are {
+    background-color: lightgrey;
+}
+/* -end- */
+
+.page {
+    width: 100%;
+    height: 100vh;
+    
+    &__video-container {
+        display: block;
+        width: 100vw;
+        height: 100%;
+        background-color: purple;
+        pointer-events: none;
+        box-sizing: border-box;
+        margin:0;
+        padding: 0;
+        overflow: hidden; 
+        
+        iframe {
+            width: 100%; 
+            height: 56.25vw; /* 100/56.25 = 560/315 = 1.778 */
+            background:red;
+            margin: 0 auto 0 auto;
+        }
+    }
+}

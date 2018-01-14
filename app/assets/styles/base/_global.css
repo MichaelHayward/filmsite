@@ -1,0 +1,9 @@
+body {
+	font-family: 'roboto', sans-serif;
+	color: #333;
+    margin: 0;
+    padding: 0;
+}
+main {
+    overflow: hidden; 
+}
