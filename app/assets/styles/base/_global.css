@@ -24,3 +24,7 @@ h6 {
 .some-bottom-padding {
     padding-bottom: 30px;
 }
+
+.transparent-box {
+    background-color: rgba(0, 0, 0, 0.5);
+}

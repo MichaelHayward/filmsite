@@ -478,6 +478,10 @@ h6 {
     padding-bottom: 30px;
 }
 
+.transparent-box {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
 .top-menu {
     text-decoration: none;
     font-size: 1.5rem;
@@ -491,15 +495,17 @@ h6 {
         width: 100%;
         height: 85px;
         background-color: #1c1c1c;
+        -webkit-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+                box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
     }
 
-.top-menu__placeholder {
+/*&__placeholder {
         display: block;
         width: 100%;
         height: 85px;
         margin: 0;
         padding: 0;
-    }
+    }*/
 
 .top-menu__component {
         padding: 19px 0 19px 0;
@@ -567,17 +573,24 @@ h6 {
 }
 
 #who-we-are {
-    background-color: lightgrey;
+    background-color: #1c1c1c;
 }
 
 /* -end- */
 
 .page {
     width: 100%;
-    height: 100vh;
     -webkit-box-sizing: border-box;
-            box-sizing: border-box;
+            box-sizing: border-box; 
+    overflow: hidden;
 }
+
+@media (min-width: 1010px) {
+
+.page {
+        height: 100vh
+}
+	}
 
 .page__video-container {
         display: block;
@@ -595,7 +608,7 @@ h6 {
 .page__video-container iframe {
             width: 100%; 
             height: 56.25vw; /* 100/56.25 = 560/315 = 1.778 */
-            background:black;
+            background-color: #1c1c1c;
             margin: 0 auto 0 auto;
         }
 
@@ -743,8 +756,6 @@ h6 {
            box-sizing: border-box;
    text-align:center;
     
-    
-    
 }
 
 .header__site {
@@ -770,20 +781,76 @@ h6 {
         
     }
 
-.header--transparent-box {
-        background-color: rgba(0, 0, 0, 0.3);
-    }
-
 .header--centered {
         margin: 0 auto 0 auto;
         display: block;
     }
 
+@media (min-width: 1010px) {
+
+.header--right-on-large {
+            float: right
+        
+    }
+	}
+
 .film {
+    overflow: hidden;
     -webkit-transition: 0.5s;
     transition: 0.5s;
+    position: relative;
 }
 
-.film:hover {
-        background: black;
+@media (min-width: 1010px) {
+            
+            .film:hover img {
+                -webkit-transform: scale(1.1);
+                        transform: scale(1.1);
+            }
+            
+            .film:hover .paragraph__container {
+                visibility: visible;
+            }
+	}
+
+@media (min-width: 1010px) {
+        .film__text {
+            visibility: hidden;
+            z-index: inherit;
+        }
+	}
+
+.film__header {
+        position: relative;
+        z-index: 2;
+        display: block;
+    }
+
+.film__art {
+        width: 100%;
+        height: auto;
+        position: absolute;
+        top: 0; right: 0; bottom: 0; left: 0;
+        -webkit-transition: 0.5s;
+        transition: 0.5s;
+    }
+
+.film__link {
+        text-decoration: none;
+    }
+
+.film__link::visited {
+            text-decoration: none;
+        }
+
+.paragraph {
+    color: #e0e0e0;
+    font-weight: 200;
+    margin: 0px;
+    padding: 16px;
+    font-size: 1.3rem;
+}
+
+.paragraph__container {
+        
     }

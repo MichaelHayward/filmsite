@@ -10,15 +10,16 @@
         width: 100%;
         height: 85px;
         background-color: #1c1c1c;
+        box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
     }
     
-    &__placeholder {
+    /*&__placeholder {
         display: block;
         width: 100%;
         height: 85px;
         margin: 0;
         padding: 0;
-    }
+    }*/
     
     &__component {
         padding: 19px 0 19px 0;
