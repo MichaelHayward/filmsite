@@ -98,7 +98,7 @@
 		width: 200px;
 		height: 200px;
 		display: block;
-		margin: 100px auto 100px auto;
+		margin: 100px auto 50px auto;
 		
 		@mixin atLarge {
 			width: 120px;
@@ -115,18 +115,21 @@
 	}
 
 	&__contact {
+		width: 35px;
+		height: 35px;
 		position: absolute;
-		right: 0;
-		margin-top: 10px;
-		margin-right: 30px;
-		background-color: orange;
-			
+		top: 50%;
+		right: 20px;
+		transform: translateY(-50%);
+		padding-top: 0;
+		background-image: url("../../assets/images/svg/mail.svg");
+		background-repeat: no-repeat;
+		
 		@mixin atLarge {
 			position: absolute;
 			right: 0;
 			margin-top: 10px;
 			margin-right: 30px;
-			background: none;
 		}
 		
 	}

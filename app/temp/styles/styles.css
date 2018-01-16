@@ -612,7 +612,7 @@ h6 {
 		width: 200px;
 		height: 200px;
 		display: block;
-		margin: 100px auto 100px auto;
+		margin: 100px auto 50px auto;
 		
 	}
 
@@ -634,11 +634,16 @@ h6 {
 	}
 
 .top-menu__contact {
+		width: 35px;
+		height: 35px;
 		position: absolute;
-		right: 0;
-		margin-top: 10px;
-		margin-right: 30px;
-		background-color: orange;
+		top: 50%;
+		right: 20px;
+		-webkit-transform: translateY(-50%);
+		        transform: translateY(-50%);
+		padding-top: 0;
+		background-image: url("../../assets/images/svg/mail.svg");
+		background-repeat: no-repeat;
 		
 	}
 
@@ -648,8 +653,7 @@ h6 {
 			position: absolute;
 			right: 0;
 			margin-top: 10px;
-			margin-right: 30px;
-			background: none
+			margin-right: 30px
 		
 	}
 	}
@@ -716,6 +720,7 @@ h6 {
 #our-films {
 	background-color: black;
 	position: relative;
+	margin-bottom: 100px;
 }
 
 @media (min-width: 530px) {

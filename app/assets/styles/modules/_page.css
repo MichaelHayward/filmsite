@@ -46,6 +46,7 @@
 #our-films {
 	background-color: black;
 	position: relative;
+	margin-bottom: 100px;
 	
 	@mixin atSmall {
 		display: flex;
