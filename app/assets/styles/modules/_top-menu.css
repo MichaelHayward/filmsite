@@ -117,9 +117,14 @@
 		right: 0;
 		margin-top: 10px;
 		margin-right: 30px;
-
-		&:hover {
-			cursor: pointer;
+		background-color: orange;
+			
+		@mixin atLarge {
+			position: absolute;
+			right: 0;
+			margin-top: 10px;
+			margin-right: 30px;
 		}
+		
 	}
 }

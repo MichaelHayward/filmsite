@@ -1,21 +1,41 @@
 .hamburger {
 	width: 30px;
 	height: 30px;
-	background-color: orange;
 	position: absolute;
 	top: 10px;
-	left: 10px;
+	left: 20px;
 	z-index: 5;
 	
 	&__middle {
-		width: 10px;
-		height: 3px;
-		background-color: #dddddd;
+		width: 100%;
+		height: 2px;
+		background-color: white;
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
 		
 		&::before {
 			content: "";
-			position: relative;
-			top: -10px;
+			width: 100%;
+			height: 2px;
+			background-color: white;
+			position: absolute;
+			top: -8px;
+			left: 0;
 		}
+		
+		&::after {
+			content: "";
+			width: 100%;
+			height: 2px;
+			background-color: white;
+			position: absolute;
+			top: 8px;
+			left: 0;
+		}
+	}
+	
+	@mixin atLarge {
+		display: none;
 	}
 }
