@@ -1,117 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700' rel='stylesheet' type='text/css'>
-  <title>Wilbee Films</title>
-  <!-- build:css assets/styles/styles.css -->
-  <link rel="stylesheet" href="temp/styles/styles.css">
-  <!-- endbuild -->
- 
-  <!-- build:js assets/scripts/Vendor.js -->
-  <script src="/temp/scripts/Vendor.js"></script>
-  <!-- endbuild -->
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700' rel='stylesheet' type='text/css'>
+	<title>Wilbee Films</title>
+	<!-- build:css assets/styles/styles.css -->
+	<link rel="stylesheet" href="temp/styles/styles.css">
+	<!-- endbuild -->
+
+	<!-- build:js assets/scripts/Vendor.js -->
+	<script src="/temp/scripts/Vendor.js"></script>
+	<!-- endbuild -->
 </head>
 <body>
-  <img class="top-menu__logo" src="assets/images/WilBee Productions.png">
-  <div class="top-menu__placeholder"></div>
-  <div class="top-menu top-menu__bar">
-    <ul class="top-menu__section-list top-menu__component">
-        <li class="top-menu__section-list__item"><a href="#home">Home</a></li>
-        <li class="top-menu__section-list__item"><a href="#our-films">Our Films</a></li>
-        <li class="top-menu__section-list__item"><a href="#who-we-are">Who We Are</a></li>
-    </ul>
-    <a href="mailto:email@email.com" class="top-menu top-menu__component top-menu__contact">email@email.com</a>
-  </div>
-  <main> 
-      <section class="page" id="home">
-      <div class="page__video-container">
-        <iframe width="100%" height="auto" src="https://www.youtube.com/embed/b01vURxZetQ?controls=0&vq=hd1080&frameborder=0&disablekb=1&playsinline=0&autoplay=1&loop=1&showinfo=0&playlist=vqHfbl2NgdU" frameborder="0"></iframe>
-      </div>
-        <div class="header__site__container">
-            <h1 class="header header__site transparent-box">Films that make you laugh</h1>
-            <h3 class="header__site__byline transparent-box">Whatever will be, <strong>Wilbee.</strong></h3>
-        </div>
-      </section>
-      <section class="page row" id="our-films">
+	
+	<div class="top-menu top-menu__bar">
+	<div class="hamburger"></div>
+	<ul class="top-menu__section-list top-menu__component">
+		<li class="top-menu__section-list__item"><a href="#home">Home</a></li>
+		<li class="top-menu__section-list__item"><a href="#our-films">Our Films</a></li>
+		<li class="top-menu__section-list__item"><a href="#who-we-are">Who We Are</a></li>
+	</ul>
+	<a href="mailto:email@email.com" class="top-menu top-menu__component top-menu__contact">email@email.com</a>
+	</div>
+	<img class="top-menu__logo" src="assets/images/WilBee Productions.png">
+	<main> 
+		<section class="page" id="home">
+			<div class="header__site__container transparent-box">
+				<h1 class="header header__site">Films that make you laugh</h1>
+				<h3 class="header__site__byline">Whatever will be, <strong>Wilbee.</strong></h3>
+			</div>
+			<div class="page__video-container">
+				<iframe width="100%" height="auto" src="https://www.youtube.com/embed/b01vURxZetQ?controls=0&vq=hd1080&frameborder=0&disablekb=1&playsinline=0&autoplay=1&loop=1&showinfo=0&playlist=vqHfbl2NgdU" frameborder="0"></iframe>
+			</div> 
+
+		</section>
+		<section class="page row" id="our-films">
+		
+			<div class="film row__large-3 row--full-height">
+				<a class="film__link" title="The Fourth Wall: coming soon!">
+					<div class="film__header">
+						<div class=" some-top-padding some-bottom-padding transparent-box">
+							<h1 class="header header--centered">Fourth Wall</h1>
+						</div>
+						<div class="film__text paragraph__container transparent-box">
+							<p class="paragraph">A short film about a play that isn’t a play. (Post 
+							Production)</p>
+						</div>
+					</div>
+					<picture class="fil__art__container">
+						<source srcset="assets/images/fourth-wall-cover-art.jpg 1500w" media="(min-width: 1500px)">
+						<img srcset="assets/images/fourth-wall-cover-art-smallscreen.jpg 640w" alt="Cover art for Fourth Wall" class="film__art">
+					</picture>
+				</a>
+			</div>
+
+			<div class="film row__large-3 row--full-height">
+				<a class="film__link" href="https://www.youtube.com/watch?v=nvrIOXv1GEI" target="blank">
+					<div class="film__header">
+						<div class=" some-top-padding some-bottom-padding transparent-box">
+							<h1 class="header header--centered">Frack Off</h1>
+						</div>
+						<div class="film__text paragraph__container transparent-box">
+							<p class="paragraph">When Stanley is accidentally elected leader of a protest 
+							group instead of his ex-girlfriend Holly, his quiet village life is interrupted forever.</p>
+						</div>
+					</div>
+					<picture class="fil__art__container">
+						<source srcset="assets/images/frack-off-cover-art.jpg 1500w" media="(min-width: 1500px)">
+						<img srcset="assets/images/frack-off-cover-art-smallscreen.jpg 640w" alt="Cover art for Fourth Wall" class="film__art">
+					</picture>
+				</a>
+			</div>
+
+			<div class="film row__large-3 row--full-height">
+				<a class="film__link" href="https://www.youtube.com/watch?v=FWWB9aZhZXA" target="blank">
+					<div class="film__header">
+						<div class=" some-top-padding some-bottom-padding transparent-box">
+							<h1 class="header header--centered">Amdram</h1>
+						</div>
+						<div class="film__text paragraph__container transparent-box">
+							<p class="paragraph">Stratford Operatic & Dramatic Independent Theatre (SODIT) 
+							audition for this year's extravaganza 'Julius Caesar: The Musical' in AmDram Part 1: 
+							Audition.</p>
+						</div>
+					</div>
+					<picture class="fil__art__container">
+						<source srcset="assets/images/amdram-cover-art.jpg 1500w" media="(min-width: 1500px)">
+						<img srcset="assets/images/amdram-cover-art-smallscreen.jpg 640w" alt="Cover art for Fourth Wall" class="film__art">
+					</picture>
+				</a>
+			</div>
         
-            <div class="film row__large-4 row--full-height film">
-                <a class="film__link" href="https://www.youtube.com/watch?v=nvrIOXv1GEI">
-                    <div class="film__header">
-                        <div class=" some-top-padding some-bottom-padding transparent-box">
-                            <h1 class="header header--centered">Fourth Wall</h1>
-                        </div>
-                        <div class="film__text paragraph__container transparent-box">
-                            <p class="paragraph">A short film about a play that isn’t a play. (Post 
-                            Production)</p>
-                        </div>
-                    </div>
-                    <img src="assets/images/fourth-wall-cover-art.jpg" class="film__art">
-                </a>
-            </div>
-            
-            <div class="row__large-4 row--full-height film">
-                <a class="film__link" href="https://www.youtube.com/watch?v=nvrIOXv1GEI">
-                    <div class="film__header">
-                        <div class=" some-top-padding some-bottom-padding transparent-box">
-                            <h1 class="header header--centered">Frack Off</h1>
-                        </div>
-                        <div class="film__text paragraph__container transparent-box">
-                            <p class="paragraph">When Stanley is accidentally elected leader of a protest 
-                            group instead of his ex-girlfriend Holly, his quiet village life is interrupted forever.</p>
-                        </div>
-                    </div>
-                    <img src="assets/images/frack-off-cover-art.jpg" class="film__art">
-               </a>
-           </div>
-           
-            <div class="row__large-4 row--full-height film">
-                <a class="film__link" href="https://www.youtube.com/watch?v=nvrIOXv1GEI">
-                    <div class="film__header">
-                        <div class=" some-top-padding some-bottom-padding transparent-box">
-                            <h1 class="header header--centered">Amdram</h1>
-                        </div>
-                        <div class="film__text paragraph__container transparent-box">
-                            <p class="paragraph">Stratford Operatic & Dramatic Independent Theatre (SODIT) 
-                            audition for this year's extravaganza 'Julius Caesar: The Musical' in AmDram Part 1: 
-                            Audition.</p>
-                        </div>
-                    </div>
-                    <img src="assets/images/amdram-cover-art.jpg" class="film__art">
-                </a>
-            </div>
-        
-      </section>
-      <section class="page row some-top-padding" id="who-we-are">
-        <div class=" row row__large-6 row--full-height">
-            
-            <h1 class="header header--centered">Scott</h1>
-            <div class="row__large-6 some-top-padding">
-                <p class="paragraph">Much like Batman, Scott leads a double life. By day he is a freelance 
-                editor, script department assistant and runner in TV, but by night he 
-                pursues the Joker jokes for Up the Antics as head of sketches. Unlike 
-                Batman, he dreams of combining these lives into one cohesive life</p>
-            </div>
-            <div class="row__large-6 some-top-padding"></div>
-            
-        </div>
-        <div class="row__large-6 row--full-height">
-        
-            <h1 class="header header--centered">Ros</h1>
-            <div class="row__large-6 some-top-padding"></div>
-            <div class="row__large-6 some-top-padding">
-                <p class="paragraph">Over the last two years Ros has been working in the TV and Film 
-                industry racking up runner, 3rd AD and Art Department credits like 
-                achievements in a video game. Outside of work ever focused on her quest, 
-                to write and produce awesome comedy, she has plays, shorts, sketches and 
-                writing credits galore to her name.</p>
-            </div>
-            
-        </div>
-      </section>
-  </main>
-  <!-- build:js assets/scripts/App.js -->
-  <script src="/temp/scripts/app.js"></script>
-  <!-- endbuild -->
+		</section>
+		<section class="page row some-top-padding" id="who-we-are">
+			<div class=" row row__large-6 row--full-height">
+			
+				<h1 class="header header--centered">Scott</h1>
+				<div class="row__large-6 some-top-padding">
+					<p class="paragraph">Much like Batman, Scott leads a double life. By day he is a freelance 
+					editor, script department assistant and runner in TV, but by night he 
+					pursues the Joker jokes for Up the Antics as head of sketches. Unlike 
+					Batman, he dreams of combining these lives into one cohesive life</p>
+				</div>
+				<div class="row__large-6 some-top-padding"></div>
+
+			</div>
+			<div class="row__large-6 row--full-height">
+
+				<h1 class="header header--centered">Ros</h1>
+				<div class="row__large-6 some-top-padding"></div>
+				<div class="row__large-6 some-top-padding">
+					<p class="paragraph">Over the last two years Ros has been working in the TV and Film 
+					industry racking up runner, 3rd AD and Art Department credits like 
+					achievements in a video game. Outside of work ever focused on her quest, 
+					to write and produce awesome comedy, she has plays, shorts, sketches and 
+					writing credits galore to her name.</p>
+				</div>
+			</div>
+		</section>
+	</main>
+	<!-- build:js assets/scripts/App.js -->
+	<script src="/temp/scripts/app.js"></script>
+	<!-- endbuild -->
 </body>
 </html>

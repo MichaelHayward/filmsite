@@ -1,0 +1,21 @@
+.hamburger {
+	width: 30px;
+	height: 30px;
+	background-color: orange;
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	z-index: 5;
+	
+	&__middle {
+		width: 10px;
+		height: 3px;
+		background-color: #dddddd;
+		
+		&::before {
+			content: "";
+			position: relative;
+			top: -10px;
+		}
+	}
+}

@@ -4,5 +4,3 @@ require('./gulp/tasks/sprites');
 require('./gulp/tasks/scripts');
 require('./gulp/tasks/modernizr');
 require('./gulp/tasks/build');
-
-/* Suspect that reload issues are to do with sprites task happening AFTER gulp watch */
