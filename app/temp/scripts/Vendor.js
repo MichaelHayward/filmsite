@@ -88,7 +88,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 
 /*!
  * modernizr v3.5.0
- * Build https://modernizr.com/download?-flexbox-setclasses-dontmin
+ * Build https://modernizr.com/download?-flexbox-svg-setclasses-dontmin
  *
  * Copyright (c)
  *  Faruk Ates
@@ -309,6 +309,30 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
   }
 
   ;
+  /*!
+  {
+    "name": "SVG",
+    "property": "svg",
+    "caniuse": "svg",
+    "tags": ["svg"],
+    "authors": ["Erik Dahlstrom"],
+    "polyfills": [
+      "svgweb",
+      "raphael",
+      "amplesdk",
+      "canvg",
+      "svg-boilerplate",
+      "sie",
+      "dojogfx",
+      "fabricjs"
+    ]
+  }
+  !*/
+  /* DOC
+  Detects support for SVG in `<embed>` or `<object>` elements.
+  */
+
+  Modernizr.addTest('svg', !!document.createElementNS && !!document.createElementNS('http://www.w3.org/2000/svg', 'svg').createSVGRect);
 
   /**
    * If the browsers follow the spec, then they would expose vendor-specific styles as:
@@ -2438,7 +2462,7 @@ var __WEBPACK_AMD_DEFINE_RESULT__;/*! picturefill - v3.0.2 - 2016-02-12
 		module.exports = picturefill;
 	} else if ( true ) {
 		// AMD support
-		!(__WEBPACK_AMD_DEFINE_RESULT__ = function() { return picturefill; }.call(exports, __webpack_require__, exports, module),
+		!(__WEBPACK_AMD_DEFINE_RESULT__ = (function() { return picturefill; }).call(exports, __webpack_require__, exports, module),
 				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
 	}
 
@@ -2620,20 +2644,20 @@ var __WEBPACK_AMD_DEFINE_RESULT__;/*! picturefill - v3.0.2 - 2016-02-12
 		var running;
 		var lastTime = 0;
 		var gDelay = 125;
-		var RIC_DEFAULT_TIMEOUT = 666;
-		var rICTimeout = RIC_DEFAULT_TIMEOUT;
+		var rICTimeout = lazySizesConfig.ricTimeout;
 		var run = function(){
 			running = false;
 			lastTime = Date.now();
 			fn();
 		};
-		var idleCallback = requestIdleCallback ?
+		var idleCallback = requestIdleCallback && lazySizesConfig.ricTimeout ?
 			function(){
 				requestIdleCallback(run, {timeout: rICTimeout});
-				if(rICTimeout !== RIC_DEFAULT_TIMEOUT){
-					rICTimeout = RIC_DEFAULT_TIMEOUT;
+
+				if(rICTimeout !== lazySizesConfig.ricTimeout){
+					rICTimeout = lazySizesConfig.ricTimeout;
 				}
-			}:
+			} :
 			rAFIt(function(){
 				setTimeout(run);
 			}, true)
@@ -2641,8 +2665,9 @@ var __WEBPACK_AMD_DEFINE_RESULT__;/*! picturefill - v3.0.2 - 2016-02-12
 
 		return function(isPriority){
 			var delay;
+
 			if((isPriority = isPriority === true)){
-				rICTimeout = 44;
+				rICTimeout = 33;
 			}
 
 			if(running){
@@ -2692,6 +2717,47 @@ var __WEBPACK_AMD_DEFINE_RESULT__;/*! picturefill - v3.0.2 - 2016-02-12
 		};
 	};
 
+	(function(){
+		var prop;
+
+		var lazySizesDefaults = {
+			lazyClass: 'lazyload',
+			loadedClass: 'lazyloaded',
+			loadingClass: 'lazyloading',
+			preloadClass: 'lazypreload',
+			errorClass: 'lazyerror',
+			//strictClass: 'lazystrict',
+			autosizesClass: 'lazyautosizes',
+			srcAttr: 'data-src',
+			srcsetAttr: 'data-srcset',
+			sizesAttr: 'data-sizes',
+			//preloadAfterLoad: false,
+			minSize: 40,
+			customMedia: {},
+			init: true,
+			expFactor: 1.5,
+			hFac: 0.8,
+			loadMode: 2,
+			loadHidden: true,
+			ricTimeout: 300,
+		};
+
+		lazySizesConfig = window.lazySizesConfig || window.lazysizesConfig || {};
+
+		for(prop in lazySizesDefaults){
+			if(!(prop in lazySizesConfig)){
+				lazySizesConfig[prop] = lazySizesDefaults[prop];
+			}
+		}
+
+		window.lazySizesConfig = lazySizesConfig;
+
+		setTimeout(function(){
+			if(lazySizesConfig.init){
+				init();
+			}
+		});
+	})();
 
 	var loader = (function(){
 		var preloadElems, isCompleted, resetPreloadingTimer, loadMode, started;
@@ -2934,7 +3000,7 @@ var __WEBPACK_AMD_DEFINE_RESULT__;/*! picturefill - v3.0.2 - 2016-02-12
 			var sizes = isImg && (elem[_getAttribute](lazySizesConfig.sizesAttr) || elem[_getAttribute]('sizes'));
 			var isAuto = sizes == 'auto';
 
-			if( (isAuto || !isCompleted) && isImg && (elem[_getAttribute]('src') || elem.srcset) && !elem.complete && !hasClass(elem, lazySizesConfig.errorClass)){return;}
+			if( (isAuto || !isCompleted) && isImg && (elem[_getAttribute]('src') || elem.srcset) && !elem.complete && !hasClass(elem, lazySizesConfig.errorClass) && hasClass(elem, lazySizesConfig.lazyClass)){return;}
 
 			detail = triggerEvent(elem, 'lazyunveilread').detail;
 
@@ -3091,47 +3157,6 @@ var __WEBPACK_AMD_DEFINE_RESULT__;/*! picturefill - v3.0.2 - 2016-02-12
 			loader._();
 		}
 	};
-
-	(function(){
-		var prop;
-
-		var lazySizesDefaults = {
-			lazyClass: 'lazyload',
-			loadedClass: 'lazyloaded',
-			loadingClass: 'lazyloading',
-			preloadClass: 'lazypreload',
-			errorClass: 'lazyerror',
-			//strictClass: 'lazystrict',
-			autosizesClass: 'lazyautosizes',
-			srcAttr: 'data-src',
-			srcsetAttr: 'data-srcset',
-			sizesAttr: 'data-sizes',
-			//preloadAfterLoad: false,
-			minSize: 40,
-			customMedia: {},
-			init: true,
-			expFactor: 1.5,
-			hFac: 0.8,
-			loadMode: 2,
-			loadHidden: true,
-		};
-
-		lazySizesConfig = window.lazySizesConfig || window.lazysizesConfig || {};
-
-		for(prop in lazySizesDefaults){
-			if(!(prop in lazySizesConfig)){
-				lazySizesConfig[prop] = lazySizesDefaults[prop];
-			}
-		}
-
-		window.lazySizesConfig = lazySizesConfig;
-
-		setTimeout(function(){
-			if(lazySizesConfig.init){
-				init();
-			}
-		});
-	})();
 
 	lazysizes = {
 		cfg: lazySizesConfig,
