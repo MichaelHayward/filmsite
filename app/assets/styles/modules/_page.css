@@ -47,12 +47,9 @@
 	background-color: black;
 	position: relative;
 	margin-bottom: 100px;
-	
-	@mixin atSmall {
-		display: flex;
-		justify-content: center;
-		flex-wrap: wrap;
-	}
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
 	
 	@mixin atVeryLarge {
 		height: 100vh;

@@ -22,6 +22,22 @@ h6 {
 	margin: 0;
 }
 
+a {
+	&:visited {
+		text-decoration: none;
+	}
+}
+
+.hoverable {
+	transition: ease-in-out 0.25s;
+	box-sizing: border-box;
+	
+	&:hover {
+		background-color: rgba(#d9a83e, 0.5);
+	}
+	
+}
+
 .some-top-padding {
 	padding-top: 30px;
 }

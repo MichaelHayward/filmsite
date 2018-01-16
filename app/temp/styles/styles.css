@@ -474,6 +474,22 @@ h6 {
 	margin: 0;
 }
 
+a:visited {
+		text-decoration: none;
+	}
+
+.hoverable {
+	-webkit-transition: ease-in-out 0.25s;
+	transition: ease-in-out 0.25s;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
+	
+}
+
+.hoverable:hover {
+		background-color: rgba(217,168,62, 0.5);
+	}
+
 .some-top-padding {
 	padding-top: 30px;
 }
@@ -641,9 +657,9 @@ h6 {
 			margin-top: 1px;
 		}
 
-.top-menu__section-list__item:hover {
-				background-color: #dddddd;
-				color: #1c1c1c;
+.top-menu__section-list__item--current-view {
+				background-color: #2d2d2d;
+				color: #d9a83e;
 			}
 
 @media (min-width: 1010px) {
@@ -654,12 +670,6 @@ h6 {
 				width: initial;
 				background: none
 		}
-
-				.top-menu__section-list__item:hover {
-					background-color: rgba(255, 255, 255, 0.1);
-					color: #d3a239;
-					border-radius: 3px;
-				}
 	}
 
 .top-menu__section-list--is-visible {
@@ -667,6 +677,13 @@ h6 {
 			display: -ms-flexbox;
 			display: flex;
 		}
+
+@media (min-width: 1010px) {
+
+.top-menu__section-list--is-visible {
+				display: inline-block
+		}
+	}
 
 .top-menu__logo {
 		width: 200px;
@@ -781,21 +798,15 @@ h6 {
 	background-color: black;
 	position: relative;
 	margin-bottom: 100px;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	-ms-flex-wrap: wrap;
+	    flex-wrap: wrap;
 }
-
-@media (min-width: 530px) {
-
-#our-films {
-		display: -webkit-box;
-		display: -ms-flexbox;
-		display: flex;
-		-webkit-box-pack: center;
-		    -ms-flex-pack: center;
-		        justify-content: center;
-		-ms-flex-wrap: wrap;
-		    flex-wrap: wrap
-}
-	}
 
 @media (min-width: 1500px) {
 
@@ -1071,15 +1082,12 @@ h6 {
 		padding-bottom: 40px;
 	}
 
-@media (min-width: 530px) {
-
 .film {
-		overflow: hidden;
-		position: relative;
-		height: 300px;
-		width: 300px
+	overflow: hidden;
+	position: relative;
+	height: 300px;
+	width: 300px;
 }
-	}
 
 @media (min-width: 1500px) {
 
@@ -1120,16 +1128,9 @@ h6 {
 	}
 
 .film__header {
-		display: block;
-	}
-
-@media (min-width: 530px) {
-
-.film__header {
 			position: relative;
 			z-index: 2;
-			display: block
-	}
+			display: block;
 	}
 
 @media (min-width: 1500px) {
@@ -1150,9 +1151,8 @@ h6 {
 		bottom: 0;
 		left: 0;
 		overflow: hidden;
-		margin: 10px;
+		margin: 0px;
 		width: 100%;
-		height: 100%;
 	}
 
 @media (min-width: 530px) {

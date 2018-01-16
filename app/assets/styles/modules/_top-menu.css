@@ -70,9 +70,9 @@
 			transition: 0.5s;
 			margin-top: 1px;
 			
-			&:hover {
-				background-color: #dddddd;
-				color: $uiGrey;
+			&--current-view {
+				background-color: #2d2d2d;
+				color: #d9a83e;
 			}
 			
 			@mixin atLarge {
@@ -80,17 +80,15 @@
 				margin-left: 10px;
 				width: initial;
 				background: none;
-
-				&:hover {
-					background-color: rgba(255, 255, 255, 0.1);
-					color: #d3a239;
-					border-radius: 3px;
-				}
 			}
 		}	
 	
 		&--is-visible {
 			display: flex;
+			
+			@mixin atLarge{
+				display: inline-block;
+			}
 		}
 	}
 
