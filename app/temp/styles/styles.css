@@ -486,6 +486,66 @@ h6 {
 	background-color: rgba(0, 0, 0, 0.6);
 }
 
+.headshot {
+	display: none;
+}
+
+@media (min-width: 530px) {
+
+.headshot {
+		display: block;
+		width: 70%;
+		-webkit-transform: translateX(25%);
+		        transform: translateX(25%)
+}
+	}
+
+@media (min-width: 800px) {
+
+.headshot {
+		width: 50%;
+		-webkit-transform: translateX(50%);
+		        transform: translateX(50%)
+}
+	}
+
+@media (min-width: 1010px) {
+
+.headshot {
+		width: 100%;
+		-webkit-transform: none;
+		        transform: none
+}
+	}
+
+.headshot__on-micro {
+		width: 80%;
+		padding: 0 10% 10% 10%;
+	}
+
+@media (min-width: 530px) {
+
+.headshot__on-micro {
+			display: none
+	}
+	}
+
+.text-icon {
+	height: 1.5rem;
+
+}
+
+@media (min-width: 1010px) {
+
+.text-icon {
+		position: absolute;
+		top: 50%;
+		-webkit-transform: translateY(-50%);
+		        transform: translateY(-50%)
+
+}
+	}
+
 .top-menu {
 	text-decoration: none;
 	font-size: 1rem;
@@ -752,7 +812,11 @@ h6 {
 
 #who-we-are {
 	background-color: #1c1c1c;
+	
 }
+
+@media (min-width: 1010px) {
+	}
 
 .row::after {
 		content: "";
@@ -766,6 +830,10 @@ h6 {
 
 .row--full-height {
 		height: 100%;
+	}
+
+.row--half-height {
+		height: 50%;
 	}
 
 .row--gutters {
@@ -794,6 +862,31 @@ h6 {
 
 .row__b-margin-until-medium {
 		margin-bottom: 1rem;
+	}
+
+@media (min-width: 530px) {
+		.row__small-4 {
+			float: left;
+			width: 33.33%;
+		}
+		
+		.row__small-4--larger {
+			width: 37%;
+		}
+
+		.row__small-6 {
+			float:left;
+			width: 50%;
+		}
+
+		.row__small-8 {
+			float: left;
+			width: 66.66%;
+		}
+
+		.row__small-8--smaller {
+			width: 63%;
+		}
 	}
 
 @media (min-width: 800px) {
@@ -974,6 +1067,10 @@ h6 {
 	}
 	}
 
+.header--bot-pad {
+		padding-bottom: 40px;
+	}
+
 @media (min-width: 530px) {
 
 .film {
@@ -1108,6 +1205,14 @@ h6 {
 }
 	}
 
+.paragraph--spaced {
+		line-height: 2.2rem;
+	}
+
+.paragraph--no-top-padding {
+		padding-top: 0;
+	}
+
 .hamburger {
 		cursor: pointer;
 		width: 35px;
@@ -1192,3 +1297,11 @@ h6 {
 				-webkit-transform: translateY(300%) translateX(8%) rotate(-45deg) scaleX(1.25);
 				        transform: translateY(300%) translateX(8%) rotate(-45deg) scaleX(1.25);
 			}
+
+.film-reel {
+	height: 30px;
+	width: 100%;
+	background-image: url("../../assets/images/svg/movie-tape.svg");
+	background-repeat: repeat;
+	background-size: contain;
+}

@@ -1,5 +1,4 @@
 .row{
-	
 	@mixin clearfix;
 	
 	&--t-padding {
@@ -8,6 +7,10 @@
 	
 	&--full-height {
 		height: 100%;
+	}
+	
+	&--half-height {
+		height: 50%;
 	}
 
 	&--gutters {
@@ -37,7 +40,32 @@
 	&__b-margin-until-medium {
 		margin-bottom: 1rem;
 	}
+	
+	@mixin atSmall {
+		&__small-4 {
+			float: left;
+			width: 33.33%;
+		}
+		
+		&__small-4--larger {
+			width: 37%;
+		}
 
+		&__small-6 {
+			float:left;
+			width: 50%;
+		}
+
+		&__small-8 {
+			float: left;
+			width: 66.66%;
+		}
+
+		&__small-8--smaller {
+			width: 63%;
+		}
+	}
+	
 	@mixin atMedium {
 		&__b-margin-until-medium {
 			margin-bottom: 0;

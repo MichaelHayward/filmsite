@@ -66,4 +66,8 @@
 
 #who-we-are {
 	background-color: #1c1c1c;
+	
+	@mixin atLarge {
+	}
+	
 }

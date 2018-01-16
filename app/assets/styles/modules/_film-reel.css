@@ -1,0 +1,7 @@
+.film-reel {
+	height: 30px;
+	width: 100%;
+	background-image: url("../../assets/images/svg/movie-tape.svg");
+	background-repeat: repeat;
+	background-size: contain;
+}

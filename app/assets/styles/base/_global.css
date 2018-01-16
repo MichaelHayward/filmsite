@@ -33,3 +33,43 @@ h6 {
 .transparent-box {
 	background-color: rgba(0, 0, 0, 0.6);
 }
+
+.headshot {
+	display: none;
+	
+	@mixin atSmall {
+		display: block;
+		width: 70%;
+		transform: translateX(25%);
+	}
+	
+	@mixin atMedium {
+		width: 50%;
+		transform: translateX(50%);
+	}
+	
+	@mixin atLarge {
+		width: 100%;
+		transform: none;
+	}
+	
+	&__on-micro {
+		width: 80%;
+		padding: 0 10% 10% 10%;
+		
+		@mixin atSmall {
+			display: none;
+		}
+	}
+}
+
+.text-icon {
+	height: 1.5rem;
+	
+	@mixin atLarge {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+
+}

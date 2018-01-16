@@ -63,4 +63,8 @@
 			float: right;
 		}
 	}
+	
+	&--bot-pad {
+		padding-bottom: 40px;
+	}
 }
