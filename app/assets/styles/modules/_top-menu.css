@@ -95,12 +95,14 @@
 	}
 
 	&__logo {
-		width: 120px;
-		height: 120px;
+		width: 200px;
+		height: 200px;
 		display: block;
-		margin: 80px auto 0 auto;
+		margin: 100px auto 100px auto;
 		
 		@mixin atLarge {
+			width: 120px;
+			height: 120px;
 			display: block;
 			position: fixed;
 			top: 8px;

@@ -8,17 +8,17 @@
 	}
 
 	&__video-container {
-		display: block;
-		height: 50vh;
-		background-color: black;
-		pointer-events: none;
-		box-sizing: border-box;
-		margin:0;
-		padding: 0;
-		overflow: hidden;
+		display: none;
 
 		@mixin atLarge {
 			height: 100vh;
+			display: block;
+			background-color: black;
+			pointer-events: none;
+			box-sizing: border-box;
+			margin:0;
+			padding: 0;
+			overflow: hidden;
 		}
 
 		& iframe {
@@ -29,7 +29,7 @@
 				width: 100%;
 			}
 
-			@mixin atVeryLarge {
+			@mixin atLarge {
 				width: 100%; 
 				height: 56.25vw;
 				background-color: #1c1c1c;

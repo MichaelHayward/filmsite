@@ -23,6 +23,7 @@
 		
 		&__container {
 			width: 100%;
+			margin-bottom: 100px;
 
 			@mixin atLarge {
 				position: absolute;
@@ -30,6 +31,7 @@
 				top: 45%;
 				width: initial;
 				transform: translateX(-50%);
+				margin-bottom: 0;
 			}
 
 			@mixin atVeryLarge {

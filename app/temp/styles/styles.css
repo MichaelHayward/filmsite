@@ -609,16 +609,18 @@ h6 {
 		}
 
 .top-menu__logo {
-		width: 120px;
-		height: 120px;
+		width: 200px;
+		height: 200px;
 		display: block;
-		margin: 80px auto 0 auto;
+		margin: 100px auto 100px auto;
 		
 	}
 
 @media (min-width: 1010px) {
 
 .top-menu__logo {
+			width: 120px;
+			height: 120px;
 			display: block;
 			position: fixed;
 			top: 8px;
@@ -667,21 +669,21 @@ h6 {
 	}
 
 .page__video-container {
-		display: block;
-		height: 50vh;
-		background-color: black;
-		pointer-events: none;
-		-webkit-box-sizing: border-box;
-		        box-sizing: border-box;
-		margin:0;
-		padding: 0;
-		overflow: hidden;
+		display: none;
 	}
 
 @media (min-width: 1010px) {
 
 .page__video-container {
-			height: 100vh
+			height: 100vh;
+			display: block;
+			background-color: black;
+			pointer-events: none;
+			-webkit-box-sizing: border-box;
+			        box-sizing: border-box;
+			margin:0;
+			padding: 0;
+			overflow: hidden
 	}
 	}
 
@@ -697,7 +699,7 @@ h6 {
 		}
 	}
 
-@media (min-width: 1500px) {
+@media (min-width: 1010px) {
 
 .page__video-container iframe {
 				width: 100%; 
@@ -918,6 +920,7 @@ h6 {
 
 .header__site__container {
 			width: 100%;
+			margin-bottom: 100px;
 
 		}
 
@@ -929,7 +932,8 @@ h6 {
 				top: 45%;
 				width: initial;
 				-webkit-transform: translateX(-50%);
-				        transform: translateX(-50%)
+				        transform: translateX(-50%);
+				margin-bottom: 0
 
 		}
 	}
