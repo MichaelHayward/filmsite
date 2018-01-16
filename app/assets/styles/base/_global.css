@@ -33,7 +33,7 @@ a {
 	box-sizing: border-box;
 	
 	&:hover {
-		background-color: rgba(#d9a83e, 0.5);
+		background-color: rgba(#d9a83e, 0.3);
 	}
 	
 }
