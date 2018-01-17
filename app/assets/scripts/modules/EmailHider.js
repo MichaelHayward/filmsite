@@ -3,7 +3,7 @@ import $ from 'jquery';
 class EmailHider {
 	constructor() {
 		this.emailText = $('.emailText');
-		this.emailAddressText = 'contact' + '@' + 'wilbee' + '.co.uk';
+		this.emailAddressText = 'wilbeefilms' + '@' + 'gmail' + '.com';
 		this.emailLink = '.emailLink';
 		this.emailLinkHref = 'mailto:' + this.emailAddressText;
 	}
@@ -15,4 +15,4 @@ class EmailHider {
 	}
 }
 
-export default EmailHider;
+export default EmailHider; 

@@ -10376,17 +10376,20 @@ var HamburgerMenu = function () {
 
 		this.hamburgerIcon = (0, _jquery2.default)('.hamburger');
 		this.menu = (0, _jquery2.default)('.top-menu__section-list');
+		this.navLink = (0, _jquery2.default)('.top-menu__section-list__item');
 		this.events();
 	}
 
 	_createClass(HamburgerMenu, [{
 		key: 'events',
 		value: function events() {
+			this.navLink.click(this.toggleTheMenu.bind(this));
 			this.hamburgerIcon.click(this.toggleTheMenu.bind(this));
 		}
 	}, {
 		key: 'toggleTheMenu',
 		value: function toggleTheMenu() {
+			console.log('toggleTheMenu called!');
 			this.menu.toggleClass('top-menu__section-list--is-visible');
 			this.hamburgerIcon.toggleClass('hamburger--close-x');
 		}
@@ -10423,7 +10426,7 @@ var EmailHider = function () {
 		_classCallCheck(this, EmailHider);
 
 		this.emailText = (0, _jquery2.default)('.emailText');
-		this.emailAddressText = 'contact' + '@' + 'wilbee' + '.co.uk';
+		this.emailAddressText = 'wilbeefilms' + '@' + 'gmail' + '.com';
 		this.emailLink = '.emailLink';
 		this.emailLinkHref = 'mailto:' + this.emailAddressText;
 	}
