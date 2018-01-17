@@ -474,9 +474,24 @@ h6 {
 	margin: 0;
 }
 
-a:visited {
-		text-decoration: none;
+a {
+	text-decoration: none;
+	color: #d9a83e;
+	-webkit-transition: 0.25s;
+	transition: 0.25s;
 	}
+
+a:hover{
+			color: #d96a3e;
+		}
+
+a:visited {
+			color: #d96a3e;
+		}
+
+a:visited:hover {
+				color: #d9a83e;
+			}
 
 .hoverable {
 	-webkit-transition: ease-in-out 0.25s;
@@ -756,7 +771,7 @@ a:visited {
 @media (min-width: 1010px) {
 
 .page__video-container {
-			height: 100vh;
+			
 			display: block;
 			background-color: black;
 			pointer-events: none;
@@ -765,6 +780,13 @@ a:visited {
 			margin:0;
 			padding: 0;
 			overflow: hidden
+	}
+	}
+
+@media (min-width: 1500px) {
+
+.page__video-container {
+			height: 100vh
 	}
 	}
 

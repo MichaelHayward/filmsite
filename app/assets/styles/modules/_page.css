@@ -11,7 +11,7 @@
 		display: none;
 
 		@mixin atLarge {
-			height: 100vh;
+			
 			display: block;
 			background-color: black;
 			pointer-events: none;
@@ -19,6 +19,10 @@
 			margin:0;
 			padding: 0;
 			overflow: hidden;
+		}
+		
+		@mixin atVeryLarge {
+			height: 100vh;
 		}
 
 		& iframe {

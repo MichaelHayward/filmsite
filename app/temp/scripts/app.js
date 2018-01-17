@@ -10338,9 +10338,16 @@ var _HamburgerMenu = __webpack_require__(2);
 
 var _HamburgerMenu2 = _interopRequireDefault(_HamburgerMenu);
 
+var _EmailHider = __webpack_require__(3);
+
+var _EmailHider2 = _interopRequireDefault(_EmailHider);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var hamburgerMenu = new _HamburgerMenu2.default();
+var emailHider = new _EmailHider2.default();
+
+emailHider.hideTheEmail();
 
 /***/ }),
 /* 2 */
@@ -10389,6 +10396,51 @@ var HamburgerMenu = function () {
 }();
 
 exports.default = HamburgerMenu;
+
+/***/ }),
+/* 3 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _jquery = __webpack_require__(0);
+
+var _jquery2 = _interopRequireDefault(_jquery);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var EmailHider = function () {
+	function EmailHider() {
+		_classCallCheck(this, EmailHider);
+
+		this.emailText = (0, _jquery2.default)('.emailText');
+		this.emailAddressText = 'contact' + '@' + 'wilbee' + '.co.uk';
+		this.emailLink = '.emailLink';
+		this.emailLinkHref = 'mailto:' + this.emailAddressText;
+	}
+
+	_createClass(EmailHider, [{
+		key: 'hideTheEmail',
+		value: function hideTheEmail() {
+			console.log('Hide the email called!');
+			this.emailText.html(this.emailAddressText);
+			(0, _jquery2.default)(this.emailLink).attr('href', this.emailLinkHref);
+		}
+	}]);
+
+	return EmailHider;
+}();
+
+exports.default = EmailHider;
 
 /***/ })
 /******/ ]);
