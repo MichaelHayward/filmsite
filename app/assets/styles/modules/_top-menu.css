@@ -4,7 +4,7 @@
 	color: #dddddd;
 	position: fixed;
 	top: 0;
-	z-index: 4;
+	z-index: 10;
 
 	@mixin atLarge {
 		font-size: 1.5rem;
