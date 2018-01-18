@@ -9,6 +9,5 @@ var emailHider = new EmailHider();
 var stickyHeader = new StickyHeader();
 
 emailHider.hideTheEmail();
-new RevealOnScroll($('#who-we-are-page'), '80%');
 new RevealOnScroll($('#our-films-page'), '80%');
 new RevealOnScroll($('.footer__content'), '100%');

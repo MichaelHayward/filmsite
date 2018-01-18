@@ -17,4 +17,14 @@
 	&--no-top-padding {
 		padding-top: 0;
 	}
+	
+	&--centered {
+		text-align: center;
+	}
+	
+	&__centered-container {
+		display: block;
+		margin: auto;
+		max-width: 600px;
+	}
 }

@@ -501,17 +501,59 @@ a:visited:hover {
 	
 }
 
+.hoverable:visited:hover {
+			color: #dddddd;
+		}
+
 .hoverable:hover {
-		background-color: rgba(217,168,62, 0.3);
+		background-color: rgba(217,106,62, 0.3);
 	}
+
+.some-top-margin {
+	margin-top: 30px;
+}
+
+.more-top-margin {
+	margin-top: 60px;
+}
 
 .some-top-padding {
 	padding-top: 30px;
 }
 
+.more-top-padding {
+	padding-top: 60px;
+}
+
+.more-top-padding--on-mobile {
+		padding-top: 60px;
+	}
+
+@media (min-width: 1010px) {
+
+.more-top-padding--on-mobile {
+			padding-top: 0px
+	}
+	}
+
 .some-bottom-padding {
 	padding-bottom: 30px;
 }
+
+.more-bottom-padding {
+	padding-bottom: 60px;
+}
+
+.more-bottom-padding--on-mobile {
+		padding-bottom: 60px;
+	}
+
+@media (min-width: 1010px) {
+
+.more-bottom-padding--on-mobile {
+			padding-bottom: 0px
+	}
+	}
 
 .transparent-box {
 	background-color: rgba(0, 0, 0, 0.6);
@@ -658,16 +700,24 @@ a:visited:hover {
 @media (min-width: 1010px) {
 
 .top-menu__section-list {
-			font-size: 1.5rem;
+			font-size: 1rem;
 			display: inline-block;
 			position: static;
 			-webkit-transform: translate(0%, 0%);
 			        transform: translate(0%, 0%);
 			height: initial;
 			padding: 19px 0 19px 0;
-			margin-top: 0;
+			margin-top: 5px;
 			text-align: left;
 			background: none
+	}
+	}
+
+@media (min-width: 1500px) {
+
+.top-menu__section-list {
+			font-size: 1.5rem;
+			margin-top: 0px
 	}
 	}
 
@@ -727,17 +777,26 @@ a:visited:hover {
 @media (min-width: 1010px) {
 
 .top-menu__logo {
-			width: 120px;
-			height: 120px;
+			width: 80px;
+			height: 80px;
 			display: block;
 			position: fixed;
-			top: 8px;
+			top: 3px;
 			left: 50%;
 			-webkit-transform: translateX(-50%);
 			        transform: translateX(-50%);
 			z-index: 10;
 			margin: 0;
 			opacity: 1
+		
+	}
+	}
+
+@media (min-width: 1500px) {
+
+.top-menu__logo {
+			width: 120px;
+			height: 120px
 		
 	}
 	}
@@ -887,6 +946,22 @@ from the section itself, so that the nav-menu links direct the user to the right
 	background-color: black;
 }
 
+#what-we-do {
+	position: relative;
+	top: -100px;
+}
+
+@media (min-width: 1010px) {
+
+#what-we-do {
+		top: -175px
+}
+	}
+
+#what-we-do-page {
+	background-color: #1c1c1c;
+}
+
 #our-films {
 	position:relative;
 	top: -100px;
@@ -905,6 +980,7 @@ from the section itself, so that the nav-menu links direct the user to the right
 	background-color: black;
 	position: relative;
 	margin-bottom: 100px;
+	margin-top: 100px;
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
@@ -924,7 +1000,9 @@ from the section itself, so that the nav-menu links direct the user to the right
 		padding-left: 2vw;
 		padding-right: 2vw;
 		-ms-flex-wrap: nowrap;
-		    flex-wrap: nowrap
+		    flex-wrap: nowrap;
+		margin-bottom: 0;
+		margin-top: 0
 }
 	}
 
@@ -936,7 +1014,7 @@ from the section itself, so that the nav-menu links direct the user to the right
 @media (min-width: 1010px) {
 
 #who-we-are {
-		top:-200px
+		top:-100px
 }
 	}
 
@@ -1200,8 +1278,8 @@ from the section itself, so that the nav-menu links direct the user to the right
 .film {
 	overflow: hidden;
 	position: relative;
-	height: 300px;
 	width: 300px;
+	height: 300px;
 }
 
 @media (min-width: 1500px) {
@@ -1232,6 +1310,11 @@ from the section itself, so that the nav-menu links direct the user to the right
 				.film:hover .film__header {
 					visibility: visible;
 				}
+				
+				.film:hover img {
+					-webkit-filter: blur(5px);
+					        filter: blur(5px);
+				}
 	}
 	}
 
@@ -1241,6 +1324,21 @@ from the section itself, so that the nav-menu links direct the user to the right
 			z-index: inherit;
 		}
 	}
+
+.film__type {
+		font-size: 1rem;
+		font-weight: 300;
+		text-align: center;
+		color: white;
+	}
+
+.film__type::before {
+			content: "(";
+		}
+
+.film__type::after {
+			content: ")";	
+		}
 
 .film__header {
 			position: relative;
@@ -1268,14 +1366,7 @@ from the section itself, so that the nav-menu links direct the user to the right
 		overflow: hidden;
 		margin: 0px;
 		width: 100%;
-	}
-
-@media (min-width: 530px) {
-
-.film__art {
-			width: 100%;
-			height: 100%
-	}
+		height: 100%;
 	}
 
 @media (min-width: 1500px) {
@@ -1304,6 +1395,17 @@ from the section itself, so that the nav-menu links direct the user to the right
 		text-shadow: 0px 0px 1px black;
 	}
 
+.film__call-to-action {
+		visibility: hidden;
+	}
+
+@media (min-width: 1010px) {
+
+.film__call-to-action {
+			visibility: inherit
+	}
+	}
+
 .paragraph {
 	color: #e0e0e0;
 	font-weight: 400;
@@ -1326,6 +1428,16 @@ from the section itself, so that the nav-menu links direct the user to the right
 
 .paragraph--no-top-padding {
 		padding-top: 0;
+	}
+
+.paragraph--centered {
+		text-align: center;
+	}
+
+.paragraph__centered-container {
+		display: block;
+		margin: auto;
+		max-width: 600px;
 	}
 
 .hamburger {

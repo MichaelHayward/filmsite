@@ -11120,7 +11120,6 @@ var emailHider = new _EmailHider2.default();
 var stickyHeader = new _StickyHeader2.default();
 
 emailHider.hideTheEmail();
-new _RevealOnScroll2.default((0, _jquery2.default)('#who-we-are-page'), '80%');
 new _RevealOnScroll2.default((0, _jquery2.default)('#our-films-page'), '80%');
 new _RevealOnScroll2.default((0, _jquery2.default)('.footer__content'), '100%');
 
@@ -11325,7 +11324,7 @@ var StickyHeader = function () {
 
 		this.lazyImages = (0, _jquery2.default)('.lazyload');
 		this.topMenuLogo = (0, _jquery2.default)('.top-menu__logo');
-		this.headerTriggerElement = (0, _jquery2.default)('#our-films');
+		this.headerTriggerElement = (0, _jquery2.default)('#what-we-do');
 		this.createHeaderWaypoint();
 		this.pageSections = (0, _jquery2.default)('.page');
 		this.headerLinks = (0, _jquery2.default)('.top-menu__section-list a');

@@ -7,7 +7,7 @@ class StickyHeader {
 	constructor() {
 		this.lazyImages = $('.lazyload')
 		this.topMenuLogo = $('.top-menu__logo')
-		this.headerTriggerElement = $('#our-films');
+		this.headerTriggerElement = $('#what-we-do');
 		this.createHeaderWaypoint();
 		this.pageSections = $('.page');
 		this.headerLinks = $('.top-menu__section-list a');
