@@ -101,3 +101,16 @@ a {
 	}
 
 }
+
+.reveal-item {
+	opacity: 0;
+	transition: 1s;
+	
+	&--is-visible {
+		opacity: 1;
+	}
+}
+
+.is-current-link {
+	background-color: #d96a3e;
+}

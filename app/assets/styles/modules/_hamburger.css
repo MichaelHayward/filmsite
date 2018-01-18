@@ -76,8 +76,14 @@
 		background-color: rgba(0, 0, 0, 0.6);
 		z-index: 9;
 		
+		
+		
 		&--is-visible {
 			display: block;
+			
+			@mixin atLarge {
+				display: none;
+			}
 		}
 	}
 }

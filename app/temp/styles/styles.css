@@ -577,6 +577,20 @@ a:visited:hover {
 }
 	}
 
+.reveal-item {
+	opacity: 0;
+	-webkit-transition: 1s;
+	transition: 1s;
+}
+
+.reveal-item--is-visible {
+		opacity: 1;
+	}
+
+.is-current-link {
+	background-color: #d96a3e;
+}
+
 .top-menu {
 	text-decoration: none;
 	font-size: 1rem;
@@ -705,6 +719,8 @@ a:visited:hover {
 		height: 200px;
 		display: block;
 		margin: 100px auto 50px auto;
+		-webkit-transition: 0.5s;
+		transition: 0.5s;
 		
 	}
 
@@ -719,11 +735,21 @@ a:visited:hover {
 			left: 50%;
 			-webkit-transform: translateX(-50%);
 			        transform: translateX(-50%);
-			z-index: 5;
-			margin: 0
+			z-index: 10;
+			margin: 0;
+			opacity: 1
 		
 	}
 	}
+
+.top-menu__logo--shrink {
+			-webkit-transition: 0.5s;
+			transition: 0.5s;
+			width:80px;
+			height:80px;
+			top: 3px;
+			opacity: 0.5;
+		}
 
 .top-menu__youtube {
 		width: 35px;
@@ -783,9 +809,9 @@ a:visited:hover {
 
 @media (min-width: 1500px) {
 
-.page {
-		height: 100vh
-}
+.page--full {
+			height: 100vh
+	}
 	}
 
 .page__video-container {
@@ -836,11 +862,31 @@ a:visited:hover {
 		}
 	}
 
+/* Below we see almost duplicates. This is because we want the on-click anchor point to be separate
+from the section itself, so that the nav-menu links direct the user to the right place more easily */
+
 #home {
+	position:relative;
+	top: -500px;
+}
+
+@media (min-width: 1010px) {
+
+#home {
+		top:-300px
+}
+	}
+
+#home-page {
 	background-color: black;
 }
 
 #our-films {
+	position:relative;
+	top:-120px;
+}
+
+#our-films-page {
 	background-color: black;
 	position: relative;
 	margin-bottom: 100px;
@@ -856,7 +902,7 @@ a:visited:hover {
 
 @media (min-width: 1500px) {
 
-#our-films {
+#our-films-page {
 		height: 100vh;
 		padding-top: 10vh;
 		padding-bottom: 10vh;
@@ -868,12 +914,20 @@ a:visited:hover {
 	}
 
 #who-we-are {
-	background-color: #1c1c1c;
-	
+	position:relative;
+	top: -150px;
 }
 
 @media (min-width: 1010px) {
+
+#who-we-are {
+		top:-200px
+}
 	}
+
+#who-we-are-page {
+	background-color: #1c1c1c;
+}
 
 .row::after {
 		content: "";
@@ -1363,6 +1417,13 @@ a:visited:hover {
 			display: block;
 		}
 
+@media (min-width: 1010px) {
+
+.hamburger__content-fader--is-visible {
+				display: none
+		}
+	}
+
 .film-reel {
 	height: 30px;
 	width: 100%;
@@ -1375,7 +1436,8 @@ footer {
 	width: 100%;
 	height: 400px;
 	overflow: hidden;
-	color: #aaaaaa;
+	background-color: none;
+	color: #888888;
 }
 
 footer a {
@@ -1410,13 +1472,14 @@ footer .footer__content {
 		display: -webkit-box;
 		display: -ms-flexbox;
 		display: flex;
-		-webkit-box-pack: end;
-		    -ms-flex-pack: end;
-		        justify-content: flex-end;
+		-webkit-box-pack: start;
+		    -ms-flex-pack: start;
+		        justify-content: flex-start;
 		-webkit-box-orient: horizontal;
 		-webkit-box-direction: normal;
 		    -ms-flex-direction: row;
 		        flex-direction: row;
+		background-color: #1c1c1c;
 	}
 
 footer .footer__content__list {

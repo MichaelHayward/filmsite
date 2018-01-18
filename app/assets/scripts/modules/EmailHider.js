@@ -9,7 +9,6 @@ class EmailHider {
 	}
 
 	hideTheEmail() {
-		console.log('Hide the email called!');
 		this.emailText.html(this.emailAddressText);
 		$(this.emailLink).attr('href', this.emailLinkHref);
 	}

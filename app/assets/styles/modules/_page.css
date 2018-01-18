@@ -2,9 +2,11 @@
 	width: 100%;
 	box-sizing: border-box; 
 	overflow: hidden;
-
-	@mixin atVeryLarge {
-		height: 100vh;
+	
+	&--full {
+		@mixin atVeryLarge {
+			height: 100vh;
+		}
 	}
 
 	&__video-container {
@@ -43,11 +45,28 @@
 	}
 }
 
+/* Below we see almost duplicates. This is because we want the on-click anchor point to be separate
+from the section itself, so that the nav-menu links direct the user to the right place more easily */
+
 #home {
+	position:relative;
+	top: -500px;
+	
+	@mixin atLarge {
+		top:-300px;
+	}
+}
+
+#home-page {
 	background-color: black;
 }
 
 #our-films {
+	position:relative;
+	top:-120px;
+}
+
+#our-films-page {
 	background-color: black;
 	position: relative;
 	margin-bottom: 100px;
@@ -66,9 +85,14 @@
 }
 
 #who-we-are {
-	background-color: #1c1c1c;
+	position:relative;
+	top: -150px;
 	
 	@mixin atLarge {
+		top:-200px;
 	}
-	
+}
+
+#who-we-are-page {
+	background-color: #1c1c1c;
 }

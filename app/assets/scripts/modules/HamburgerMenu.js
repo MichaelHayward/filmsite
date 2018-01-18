@@ -11,15 +11,21 @@ class HamburgerMenu {
 	
 	events() {
 		this.contentFader.click(this.toggleTheMenu.bind(this));
-		this.navLink.click(this.toggleTheMenu.bind(this));
+		this.navLink.click(this.removeTheMenu.bind(this));
 		this.hamburgerIcon.click(this.toggleTheMenu.bind(this));
+		
 	}
 	
 	toggleTheMenu() {
-		console.log('toggleTheMenu called!');
 		this.menu.toggleClass('top-menu__section-list--is-visible');
 		this.hamburgerIcon.toggleClass('hamburger--close-x');
 		this.contentFader.toggleClass('hamburger__content-fader--is-visible');
+	}
+	
+	removeTheMenu() {
+		this.menu.removeClass('top-menu__section-list--is-visible');
+		this.hamburgerIcon.removeClass('hamburger--close-x');
+		this.contentFader.removeClass('hamburger__content-fader--is-visible');
 	}
 }
 

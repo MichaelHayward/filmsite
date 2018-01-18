@@ -23,17 +23,17 @@
 		<div class="hamburger__middle"></div>
 	</div>
 	<ul class="top-menu__section-list top-menu__component">
-		<li class="top-menu__section-list__item"><a class="hoverable" href="#home">Home</a></li>
-		<li class="top-menu__section-list__item"><a class="hoverable" href="#our-films">Our Films</a></li>
-		<li class="top-menu__section-list__item"><a class="hoverable" href="#who-we-are">Who We Are</a></li>
-		
+		<li class="top-menu__section-list__item"><a class="hoverable" id="home-link" href="#home">Top</a></li>
+		<li class="top-menu__section-list__item"><a class="hoverable" id="our-films-link" href="#our-films">Our Films</a></li>
+		<li class="top-menu__section-list__item"><a class="hoverable" id="who-we-are-link" href="#who-we-are">Who We Are</a></li>
 	</ul>
 	<a class="top-menu__component top-menu__youtube" href="https://www.youtube.com/channel/UCISu1dXmq7uhVQGqUYcgJ5Q"></a>
 	<a href="" class="top-menu top-menu__component top-menu__contact emailLink"></a>
 	</div>
 	<img class="top-menu__logo" src="assets/images/WilBee Productions.png">
 	<main> 
-		<section class="page" id="home">
+		<section class="page page--full" id="home-page" data-matching-link="#home-link">
+			<div id="home"></div>
 			<div class="header__site__container transparent-box">
 				<h1 class="header header__site">Films that make you laugh</h1>
 				<h3 class="header__site__byline">Whatever will be, <strong>Wilbee.</strong></h3>
@@ -43,8 +43,8 @@
 			</div> 
 
 		</section>
-		<section class="page row" id="our-films">
-		
+		<section class="page page--full row reveal-item" id="our-films-page" data-matching-link="#our-films-link">
+			<div id="our-films"></div>
 			<div class="film row__large-3 row--full-height">
 				<a class="film__link" title="The Fourth Wall: coming soon!">
 					<div class="film__header">
@@ -101,9 +101,9 @@
         
 		</section>
 		<div class="film-reel"></div>
-		<section class="row some-top-padding" id="who-we-are">
+		<section class="page row some-top-padding reveal-item" id="who-we-are-page" data-matching-link="#who-we-are-link">
+			<div id="who-we-are"></div>
 			<div class=" row row__large-6 row--full-height">
-			
 				<h1 class="header header--centered header--bot-pad">Scott</h1>
 				<div class="row__small-6 row--full-height">
 				<img class="headshot__on-micro some-bottom-padding" src="assets/images/scott-wilson.jpg">
@@ -136,7 +136,7 @@
 		</section>
 		<div class="film-reel"></div>
 		<footer>
-			<div class="footer__content">
+			<div class="footer__content reveal-item">
 				<ul class="footer__content__list">
 					<li>&#169; Wilbee Productions 2018</li>
 					<li><a class="emailText emailLink" href="">a</a></li>
