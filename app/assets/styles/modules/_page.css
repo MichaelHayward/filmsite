@@ -50,7 +50,7 @@ from the section itself, so that the nav-menu links direct the user to the right
 
 #home {
 	position:relative;
-	top: -500px;
+	top: -500px; /* guaranteed send right to top */
 	
 	@mixin atLarge {
 		top:-300px;
@@ -63,7 +63,11 @@ from the section itself, so that the nav-menu links direct the user to the right
 
 #our-films {
 	position:relative;
-	top:-120px;
+	top: -100px; /* equal to 2x height of navbar in this view */
+	
+	@mixin atLarge {
+		top:-120px;
+	}
 }
 
 #our-films-page {
@@ -86,7 +90,7 @@ from the section itself, so that the nav-menu links direct the user to the right
 
 #who-we-are {
 	position:relative;
-	top: -150px;
+	top: -100px;
 	
 	@mixin atLarge {
 		top:-200px;

@@ -7,28 +7,29 @@
 	<link rel="icon" 
       type="image/png" 
       href="assets/images/wilbee-favicon.png">
-	<link rel="stylesheet" href="assets/styles/styles-02be9549ba.css"/>
+	<link rel="stylesheet" href="assets/styles/styles-b9a2769e11.css"/>
 
-	<script src="assets/scripts/Vendor-34da8228ab.js"></script>
+	<script src="assets/scripts/Vendor-e2080953e5.js"></script>
 	
 </head>
 <body>
-	
+	<div class="hamburger__content-fader"></div>
 	<div class="top-menu top-menu__bar">
 	<div class="hamburger">
 		<div class="hamburger__middle"></div>
 	</div>
 	<ul class="top-menu__section-list top-menu__component">
-		<li class="top-menu__section-list__item"><a class="hoverable" href="#home">Home</a></li>
-		<li class="top-menu__section-list__item"><a class="hoverable" href="#our-films">Our Films</a></li>
-		<li class="top-menu__section-list__item"><a class="hoverable" href="#who-we-are">Who We Are</a></li>
-		<li class="top-menu__section-list__item"><a href="https://www.youtube.com/channel/UCISu1dXmq7uhVQGqUYcgJ5Q"><img class="text-icon" src="assets/images/youtube-logo.png"></a></li>
+		<li class="top-menu__section-list__item"><a class="hoverable" id="home-link" href="#home">Top</a></li>
+		<li class="top-menu__section-list__item"><a class="hoverable" id="our-films-link" href="#our-films">Our Films</a></li>
+		<li class="top-menu__section-list__item"><a class="hoverable" id="who-we-are-link" href="#who-we-are">Who We Are</a></li>
 	</ul>
-	<a href="mailto:email@email.com" class="top-menu top-menu__component top-menu__contact"></a>
+	<a class="top-menu__component top-menu__youtube" href="https://www.youtube.com/channel/UCISu1dXmq7uhVQGqUYcgJ5Q"></a>
+	<a href="" class="top-menu top-menu__component top-menu__contact emailLink"></a>
 	</div>
 	<img class="top-menu__logo" src="assets/images/WilBee Productions.png">
 	<main> 
-		<section class="page" id="home">
+		<section class="page page--full" id="home-page" data-matching-link="#home-link">
+			<div id="home"></div>
 			<div class="header__site__container transparent-box">
 				<h1 class="header header__site">Films that make you laugh</h1>
 				<h3 class="header__site__byline">Whatever will be, <strong>Wilbee.</strong></h3>
@@ -38,8 +39,8 @@
 			</div> 
 
 		</section>
-		<section class="page row" id="our-films">
-		
+		<section class="page page--full row reveal-item" id="our-films-page" data-matching-link="#our-films-link">
+			<div id="our-films"></div>
 			<div class="film row__large-3 row--full-height">
 				<a class="film__link" title="The Fourth Wall: coming soon!">
 					<div class="film__header">
@@ -47,11 +48,10 @@
 							<h1 class="header header--centered">Fourth Wall</h1>
 						</div>
 						<div class="film__text paragraph__container transparent-box">
-							<p class="paragraph">A short film about a play that isn’t a play. (Post 
-							Production)</p>
+							<p class="paragraph">A short film about a play that isn’t a play. (Post Production)</p>
 						</div>
 					</div>
-					<picture class="fil__art__container">
+					<picture class="film__art__container">
 						<source srcset="assets/images/fourth-wall-cover-art.jpg 1500w" media="(min-width: 1500px)">
 						<img srcset="assets/images/fourth-wall-cover-art-smallscreen.jpg 640w" alt="Cover art for Fourth Wall" class="film__art">
 					</picture>
@@ -69,9 +69,9 @@
 							group instead of his ex-girlfriend Holly, his quiet village life is interrupted forever.</p>
 						</div>
 					</div>
-					<picture class="fil__art__container">
+					<picture class="film__art__container">
 						<source srcset="assets/images/frack-off-cover-art.jpg 1500w" media="(min-width: 1500px)">
-						<img srcset="assets/images/frack-off-cover-art-smallscreen.jpg 640w" alt="Cover art for Fourth Wall" class="film__art">
+						<img srcset="assets/images/frack-off-cover-art-smallscreen.jpg 640w" alt="Cover art for Frack Off" class="film__art">
 					</picture>
 				</a>
 			</div>
@@ -83,29 +83,29 @@
 							<h1 class="header header--centered">Amdram</h1>
 						</div>
 						<div class="film__text paragraph__container transparent-box">
-							<p class="paragraph">Stratford Operatic & Dramatic Independent Theatre (SODIT) 
+							<p class="paragraph">Stratford Operatic &amp; Dramatic Independent Theatre (SODIT) 
 							audition for this year's extravaganza 'Julius Caesar: The Musical' in AmDram Part 1: 
 							Audition.</p>
 						</div>
 					</div>
 					<picture class="fil__art__container">
 						<source srcset="assets/images/amdram-cover-art.jpg 1500w" media="(min-width: 1500px)">
-						<img srcset="assets/images/amdram-cover-art-smallscreen.jpg 640w" alt="Cover art for Fourth Wall" class="film__art">
+						<img srcset="assets/images/amdram-cover-art-smallscreen.jpg 640w" alt="Cover art for Amdram" class="film__art">
 					</picture>
 				</a>
 			</div>
         
 		</section>
 		<div class="film-reel"></div>
-		<section class="row some-top-padding" id="who-we-are">
+		<section class="page row some-top-padding reveal-item" id="who-we-are-page" data-matching-link="#who-we-are-link">
+			<div id="who-we-are"></div>
 			<div class=" row row__large-6 row--full-height">
-			
 				<h1 class="header header--centered header--bot-pad">Scott</h1>
 				<div class="row__small-6 row--full-height">
 				<img class="headshot__on-micro some-bottom-padding" src="assets/images/scott-wilson.jpg">
 					<p class="paragraph paragraph--spaced paragraph--no-top-padding">Much like Batman, Scott leads a double life. By day he is a freelance 
 					editor, script department assistant and runner in TV, but by night he 
-					pursues the Joker jokes for Up the Antics as head of sketches. Unlike 
+					pursues the Joker, and jokes for <a href="http://uptheantics.co.uk/">Up the Antics</a> as head of sketches. Unlike 
 					Batman, he dreams of combining these lives into one cohesive life</p>
 				</div>
 				<div class="row__small-6 row--full-height">
@@ -132,16 +132,16 @@
 		</section>
 		<div class="film-reel"></div>
 		<footer>
-			<div class="footer__content">
+			<div class="footer__content reveal-item">
 				<ul class="footer__content__list">
 					<li>&#169; Wilbee Productions 2018</li>
-					<li><a href="mailto:email@email.com">email@email.com</a></li>
+					<li><a class="emailText emailLink" href="">a</a></li>
 					<li>In association with: <a href="http://uptheantics.co.uk/">Up the Antics</a></li>
 					<li>Website by <a href="http://mikebuildswebsites.com/">Mike Hayward</a></li>
 				</ul>
 			</div>
 		</footer>
 	</main>
-	<script src="assets/scripts/App-5b63c6d98d.js"></script>
+	<script src="assets/scripts/App-dcf7a2a65f.js"></script>
 </body>
 </html>

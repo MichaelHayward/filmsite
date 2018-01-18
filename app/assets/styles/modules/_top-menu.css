@@ -113,11 +113,15 @@
 		}
 		
 		&--shrink {
-			transition: 0.5s;
-			width:80px;
-			height:80px;
-			top: 3px;
-			opacity: 0.5;
+			
+			@mixin atLarge {
+				transition: 0.5s;
+				width:80px;
+				height:80px;
+				top: 3px;
+				opacity: 0.5;
+			}
+			
 		}
 		
 	}
