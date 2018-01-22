@@ -8,6 +8,5 @@ var hamburgerMenu = new HamburgerMenu();
 var emailHider = new EmailHider();
 var stickyHeader = new StickyHeader();
 
-emailHider.hideTheEmail();
+emailHider.hideTheEmail(); 
 new RevealOnScroll($('#our-films-page'), '80%');
-new RevealOnScroll($('.footer__content'), '100%');

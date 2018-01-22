@@ -136,12 +136,32 @@
 		
 	}
 	
-	&__youtube {
+	&__twitter {
 		width: 35px;
 		height: 35px;
 		position: absolute;
 		top: 50%;
 		right: 70px;
+		transform: translateY(-50%);
+		padding-top: 0;
+		background-image: url("../../assets/images/svg/twitter.svg");
+		background-repeat: no-repeat;
+		background-size: contain;
+		
+		@mixin atLarge {
+			position: absolute;
+			right: 0;
+			margin-top: 10px;
+			margin-right: 80px;
+		}
+	}
+	
+	&__youtube {
+		width: 35px;
+		height: 35px;
+		position: absolute;
+		top: 50%;
+		right: 120px;
 		transform: translateY(-50%);
 		padding-top: 0;
 		background-image: url("../../assets/images/svg/YT.svg");
@@ -152,7 +172,7 @@
 			position: absolute;
 			right: 0;
 			margin-top: 10px;
-			margin-right: 80px;
+			margin-right: 130px;
 		}
 	}
 

@@ -109,7 +109,7 @@
 	&__call-to-action {
 		visibility: hidden;
 		
-		@mixin atLarge {
+		@mixin atVeryLarge {
 			visibility: inherit;
 		}
 	}

@@ -11121,7 +11121,6 @@ var stickyHeader = new _StickyHeader2.default();
 
 emailHider.hideTheEmail();
 new _RevealOnScroll2.default((0, _jquery2.default)('#our-films-page'), '80%');
-new _RevealOnScroll2.default((0, _jquery2.default)('.footer__content'), '100%');
 
 /***/ }),
 /* 3 */

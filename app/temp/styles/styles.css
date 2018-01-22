@@ -814,12 +814,36 @@ a:visited:hover {
 		}
 	}
 
-.top-menu__youtube {
+.top-menu__twitter {
 		width: 35px;
 		height: 35px;
 		position: absolute;
 		top: 50%;
 		right: 70px;
+		-webkit-transform: translateY(-50%);
+		        transform: translateY(-50%);
+		padding-top: 0;
+		background-image: url("../../assets/images/svg/twitter.svg");
+		background-repeat: no-repeat;
+		background-size: contain;
+	}
+
+@media (min-width: 1010px) {
+
+.top-menu__twitter {
+			position: absolute;
+			right: 0;
+			margin-top: 10px;
+			margin-right: 80px
+	}
+	}
+
+.top-menu__youtube {
+		width: 35px;
+		height: 35px;
+		position: absolute;
+		top: 50%;
+		right: 120px;
 		-webkit-transform: translateY(-50%);
 		        transform: translateY(-50%);
 		padding-top: 0;
@@ -834,7 +858,7 @@ a:visited:hover {
 			position: absolute;
 			right: 0;
 			margin-top: 10px;
-			margin-right: 80px
+			margin-right: 130px
 	}
 	}
 
@@ -1399,7 +1423,7 @@ from the section itself, so that the nav-menu links direct the user to the right
 		visibility: hidden;
 	}
 
-@media (min-width: 1010px) {
+@media (min-width: 1500px) {
 
 .film__call-to-action {
 			visibility: inherit
