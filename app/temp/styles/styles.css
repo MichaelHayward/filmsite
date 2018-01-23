@@ -1610,13 +1610,6 @@ footer a:visited:hover {
 					color: #d9a83e;
 				}
 
-@media (min-width: 1010px) {
-
-footer {
-		height: 40vh
-}
-	}
-
 footer .footer__content {
 		height: 100%;
 		margin-top: 200px;
