@@ -15,7 +15,7 @@
 		height: 50px;
 		background-color: #1c1c1c;
 		box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
-		
+
 		@mixin atLarge {
 			height: 85px;
 		}
@@ -24,11 +24,11 @@
 	&__component {
 		font-weight: 300;
 		padding-top: 7px;
-		
+
 		@mixin atLarge {
 			padding: 19px 0 19px 0;
 		}
-		
+
 	}
 
 	&__section-list {
@@ -44,7 +44,7 @@
 		width: 70%;
 		text-align: center;
 		background-color: rgba(0, 0, 0, 0.6);
-		
+
 		@mixin atLarge {
 			font-size: 1rem;
 			display: inline-block;
@@ -56,41 +56,41 @@
 			text-align: left;
 			background: none;
 		}
-		
+
 		@mixin atVeryLarge {
 			font-size: 1.5rem;
 			margin-top: 0px;
 		}
-		
+
 		& a {
 			text-decoration: none;
 			color: inherit;
 			display: block;
 			padding: 10px;
 		}
-		
+
 		&__item {
 			background-color: $uiGrey;
 			display: block;
 			transition: 0.5s;
 			margin-top: 1px;
-			
+
 			&--current-view {
 				background-color: #2d2d2d;
-				color: #d9a83e;
+				color: #f6a000;
 			}
-			
+
 			@mixin atLarge {
 				display: inline-block;
 				margin-left: 10px;
 				width: initial;
 				background: none;
 			}
-		}	
-	
+		}
+
 		&--is-visible {
 			display: flex;
-			
+
 			@mixin atLarge{
 				display: inline-block;
 			}
@@ -103,7 +103,7 @@
 		display: block;
 		margin: 100px auto 50px auto;
 		transition: 0.5s;
-		
+
 		@mixin atLarge {
 			width: 80px;
 			height: 80px;
@@ -116,14 +116,14 @@
 			margin: 0;
 			opacity: 1;
 		}
-		
+
 		@mixin atVeryLarge {
 			width: 120px;
 			height: 120px;
 		}
-		
+
 		&--shrink {
-			
+
 			@mixin atLarge {
 				transition: 0.5s;
 				width:80px;
@@ -131,11 +131,11 @@
 				top: 3px;
 				opacity: 0.5;
 			}
-			
+
 		}
-		
+
 	}
-	
+
 	&__twitter {
 		width: 35px;
 		height: 35px;
@@ -147,7 +147,7 @@
 		background-image: url("../../assets/images/svg/twitter.svg");
 		background-repeat: no-repeat;
 		background-size: contain;
-		
+
 		@mixin atLarge {
 			position: absolute;
 			right: 0;
@@ -155,7 +155,7 @@
 			margin-right: 80px;
 		}
 	}
-	
+
 	&__youtube {
 		width: 35px;
 		height: 35px;
@@ -167,7 +167,7 @@
 		background-image: url("../../assets/images/svg/YT.svg");
 		background-repeat: no-repeat;
 		background-size: contain;
-		
+
 		@mixin atLarge {
 			position: absolute;
 			right: 0;
@@ -186,13 +186,13 @@
 		padding-top: 0;
 		background-image: url("../../assets/images/svg/mail.svg");
 		background-repeat: no-repeat;
-		
+
 		@mixin atLarge {
 			position: absolute;
 			right: 0;
 			margin-top: 10px;
 			margin-right: 30px;
 		}
-		
+
 	}
 }

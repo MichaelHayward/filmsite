@@ -1,0 +1,27 @@
+.bio-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 1rem;
+  color: #e0e0e0;
+  font-weight: 300;
+  font-size: 1.15rem;
+  line-height: 1.5rem;
+
+  &__bio {
+    margin: 2rem;
+    padding: 1rem;
+    max-width: 350px;
+
+    &__image-container {
+      display: block;
+      margin: auto;
+      width: 100%;
+    }
+
+    &__image {
+      display: block;
+      width: 100%;
+    }
+  }
+}

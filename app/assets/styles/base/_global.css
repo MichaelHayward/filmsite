@@ -26,7 +26,7 @@ a {
 	text-decoration: none;
 	color: #d9a83e;
 	transition: 0.25s;
-	
+
 		&:hover{
 			color: #d96a3e;
 		}
@@ -43,17 +43,17 @@ a {
 .hoverable {
 	transition: ease-in-out 0.25s;
 	box-sizing: border-box;
-	
+
 	&:visited {
 		&:hover {
 			color: #dddddd;
 		}
 	}
-	
+
 	&:hover {
-		background-color: rgba(#d96a3e, 0.3);
+		background-color: rgba(#f6a000, 0.3);
 	}
-	
+
 }
 
 .some-top-margin {
@@ -70,10 +70,10 @@ a {
 
 .more-top-padding {
 	padding-top: 60px;
-	
+
 	&--on-mobile {
 		padding-top: 60px;
-		
+
 		@mixin atLarge {
 			padding-top: 0px;
 		}
@@ -86,10 +86,10 @@ a {
 
 .more-bottom-padding {
 	padding-bottom: 60px;
-	
+
 	&--on-mobile {
 		padding-bottom: 60px;
-		
+
 		@mixin atLarge {
 			padding-bottom: 0px;
 		}
@@ -102,27 +102,27 @@ a {
 
 .headshot {
 	display: none;
-	
+
 	@mixin atSmall {
 		display: block;
 		width: 70%;
 		transform: translateX(25%);
 	}
-	
+
 	@mixin atMedium {
 		width: 50%;
 		transform: translateX(50%);
 	}
-	
+
 	@mixin atLarge {
 		width: 100%;
 		transform: none;
 	}
-	
+
 	&__on-micro {
 		width: 80%;
 		padding: 0 10% 10% 10%;
-		
+
 		@mixin atSmall {
 			display: none;
 		}
@@ -131,7 +131,7 @@ a {
 
 .text-icon {
 	height: 1.5rem;
-	
+
 	@mixin atLarge {
 		position: absolute;
 		top: 50%;
@@ -143,13 +143,12 @@ a {
 .reveal-item {
 	opacity: 0;
 	transition: 1s;
-	
+
 	&--is-visible {
 		opacity: 1;
 	}
 }
 
 .is-current-link {
-	background-color: #d96a3e;
+	background-color: #f6a000;
 }
-
